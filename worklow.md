@@ -6,6 +6,32 @@
 
 #models
 1. users
-2. Campaign
-3. post
-4. contract
+- Full name
+- Address
+- Business - one to many
+- socials - (telegram)
+
+2. Business
+- Name
+- Address 
+- Owner - Foreignkey
+- Managers - MtoM with users
+- No of Customers/ Followers - M to M with users
+- Campaign - one to many with Campaign
+
+3. Campaign
+- Name
+- Target
+- Affiliates - Many to Many with users
+- current 
+
+4. post/blog
+- title
+- slug
+- content
+- images
+
+5. contract
+- issuedby - one to one
+- issuedfor - one to one
+- contact
