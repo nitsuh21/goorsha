@@ -73,14 +73,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'goorsha.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+AUTH_USER_MODEL = 'users.User'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'goorsha',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': '5432',
     }
 }
 
