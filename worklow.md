@@ -35,3 +35,17 @@
 - issuedby - one to one
 - issuedfor - one to one
 - contact
+
+#use cases
+1. Sign up / social signup
+- username
+- email
+- phonenumber
+- password 
+- pin
+
+2. Sign in / social signin
+- email + password
+- pin
+
+=> we gonna use DRF for this project. let's identify the correct approach for it.
