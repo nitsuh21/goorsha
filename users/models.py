@@ -17,7 +17,16 @@ class User(AbstractUser):
     profile_picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True)
     is_verified = models.BooleanField(default=False)
     own_businesses = models.BooleanField(default=False)
+    connection = models.ManyToManyField('self', through='Connection', symmetrical=False)
 
     def __str__(self):
         return self.username
 
+
+class Connection(models.Model):
+    identifier = models.CharField(max_length=50)
+    connection = models.ForeignKey(User, on_delete=models.CASCADE, related_name='connection')
+    is_accepted = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.connection) + ' - ' + str(self.identifier)
