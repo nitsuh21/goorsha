@@ -81,7 +81,8 @@ DATABASES = {
         'NAME': 'goorsha',
         'USER': 'nit',
         'PASSWORD': '',
-        'HOST': '5432',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
