@@ -50,3 +50,6 @@
 
 => we gonna use DRF for this project. let's identify the correct approach for it.
 - upon research made, applying JWT is choosen. because for stateless and no need to verify on db like token authentication
+
+
+#How should the affiliate work?
