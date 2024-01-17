@@ -53,3 +53,4 @@
 
 
 #How should the affiliate work?
+currently let's add affiliates for products and introduce a new feature to add their services
