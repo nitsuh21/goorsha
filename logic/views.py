@@ -2,6 +2,7 @@ import statistics
 from typing import Any
 from requests import Response
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from logic.models import Business, Campaign
 from logic.serializers import BusinessSerializer, CampaignSerializer
 
@@ -9,6 +10,7 @@ from logic.serializers import BusinessSerializer, CampaignSerializer
 class BusinessList(APIView):
     queryset = Business.objects.all()
     serializer_class = BusinessSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
