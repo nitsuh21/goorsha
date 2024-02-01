@@ -32,11 +32,10 @@ class Campaign(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=50)
     product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name='product')
-    business = models.ForeignKey(Business, on_delete=models.CASCADE,related_name='business')
     affiliates = models.ForeignKey(User, on_delete=models.CASCADE, related_name='affiliates')
-    no_of_likes = models.IntegerField(blank=True)
-    no_of_visitors = models.IntegerField(blank=True)
-    no_of_sales = models.IntegerField(blank=True)
+    no_of_likes = models.IntegerField(blank=True,default = 0)
+    no_of_visitors = models.IntegerField(blank=True, default = 0)
+    no_of_sales = models.IntegerField(blank=True, default =0)
 
     def __str__(self):
         return self.name
