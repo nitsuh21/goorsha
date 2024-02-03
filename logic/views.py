@@ -5,12 +5,11 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 from logic.models import Business, Campaign, Product
 from logic.serializers import BusinessSerializer, CampaignSerializer, ProductSerializer
 
-# Create your views here.
 class BusinessList(APIView):
     def get(self, request):
         businesses = Business.objects.all()
-        sertalizer = BusinessSerializer(businesses,many=True)
-        return Response(sertalizer.data)
+        serializer = BusinessSerializer(businesses, many=True)
+        return Response(serializer.data)
     
     def post(self,request):
         serializer = BusinessSerializer(data=request.data)
