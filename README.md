@@ -1,1 +1,1 @@
-A Marking tool.
+A Marking tool for business.
